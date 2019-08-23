@@ -7,6 +7,9 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+function consume(a, b, cb) {
+  return cb(a, b);
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -14,11 +17,13 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-
+const add = (a, b) => a + b;
+const multiply = (a, b) => a * b;
+const greeting = (fname, lname) => `Hello ${fname} ${lname}, nice to meet you!`;
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -27,6 +32,13 @@
 
 // Explanation: 
 
+/* 
+ *
+When nestedfunction is first executed, it tries to resolve the variable name
+internal by checking its iternal scope, failing that, it checks the scope immediately
+preceding it i.e. the myFunction scope, it is here that it finds the binding for the
+internal  variable and resolves its value.
+*/
 
 const external = "I'm outside the function";
 
