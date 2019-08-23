@@ -35,12 +35,14 @@ on the function passed to the map method whereas in `forEach`, the results from
 running the function passed to the method are discarded for every element.
 
 2. What is the difference between a function and a method?
+
 Function are a named encapsulation of a block of code that accomplishes 
 a given task are mean to be standalone and reusable whenever we need to 
 accomplish the task whereas methods are basically functions that are defined
 inside of and hence bound to some object.
 
 3. What is closure?
+
 A closure is a function is a function that remembers variable defined outisde
 of its scope and can access them.
 
@@ -74,6 +76,8 @@ class in question. When the constructor in the inheriting class gets executed,
 it does not create a binding for this, as would be the case when a normal
 constructor is run. We therefore have to explicitly call super to ensure that
 a binding for this is created for the current object.
+
+
 ## Project Set up
 
 Follow these steps to set up and work on your project:
