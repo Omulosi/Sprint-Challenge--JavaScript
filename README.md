@@ -28,15 +28,59 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
+
 1. Describe the biggest difference between `.forEach` & `.map`.
+
+`.map` returns a new array that contains the transformed elements depending
+on the function passed to the map method whereas in `forEach`, the results from
+running the function passed to the method are discarded for every element.
+
 
 2. What is the difference between a function and a method?
 
+A function is a named encapsulation of a block of code that accomplishes 
+a given task and is meant to be standalone and reusable whenever we need to 
+accomplish the task whereas methods are basically functions that are defined
+inside of and hence bound to some object.
+
+
 3. What is closure?
+
+A closure is a function is a function that remembers variable defined outisde
+of its scope and can access them.
+
 
 4. Describe the four rules of the 'this' keyword.
 
+* I. Global object binding
+
+ The value of this, in the global scope, is either bound to the window 
+ object in the browser or the console object on the terminal.
+
+* II. Implicit binding
+
+ When manipulating objects and trying to access their properties/methods
+ using the dot notation, the value of this points to the object that immediately
+ precedes the dot.
+
+* III. Building objects using new and constructor functions
+
+ The value of this in this case will be the new object that's been created using
+ the constructor function
+
+* IV. Explicit binding
+  
+  The value of this is explicitly bound to some method using .apply or .call on 
+  a method.
+
+
 5. Why do we need super() in an extended class?
+
+To ensure that `this` gets bound to the object that will be created by the
+class in question. When the constructor in the inheriting class gets executed,
+it does not create a binding for this, as would be the case when a normal
+constructor is run. We therefore have to explicitly call super to ensure that
+a binding for this is created for the current object.
 
 ## Project Set up
 
